@@ -97,6 +97,11 @@ jobs:
         mixkey: ${{ env.SOURCE_REPO }}-${{ env.REPO_BRANCH }}-${{ env.DEVICE_TARGET }}-${{ env.DEVICE_SUBTARGET }}
         prefix: ${{ env.OPENWRT_PATH }}
 
+    - name: luci-app-adguardhome
+      run: |
+        cd openwrt/package 
+        git clone https://github.com/lsbst1986/luci-app-adguardhome.git
+
     - name: Install Feeds
       run: |
         cd $OPENWRT_PATH
@@ -181,7 +186,7 @@ jobs:
           - ⚽ 固件源码: ${{ env.REPO_URL }}
           - 💝 源码分支: ${{ env.REPO_BRANCH }}
           - 🚀 内核版本: ${{ env.KERNEL }}
-          - 🌐 默认地址: 192.168.1.1
+          - 🌐 默认地址: 192.168.88.3
           - 🔑 默认密码: password
           ### 🧊 固件版本
           - 固件编译前最后一次➦[主源码](${{ env.REPO_URL }})更新记录
