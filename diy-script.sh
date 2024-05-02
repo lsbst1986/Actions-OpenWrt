@@ -29,7 +29,7 @@ function git_sparse_clone() {
 git clone --depth=1 -b main https://github.com/fw876/helloworld package/luci-app-ssr-plus
 #git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall package/luci-app-passwall
-git_sparse_clone master https://github.com/vernesong/OpenClash luci-app-openclash
+#git_sparse_clone master https://github.com/vernesong/OpenClash luci-app-openclash
 
 # Themes
 #git clone --depth=1 -b 18.06 https://github.com/kiddin9/luci-theme-edge package/luci-theme-edge
@@ -42,7 +42,7 @@ git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config package/l
 #cp -f $GITHUB_WORKSPACE/images/bg1.jpg package/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg
 
 # x86 型号只显示 CPU 型号
-sed -i 's/${g}.*/${a}${b}${c}${d}${e}${f}${hydrid}/g' package/lean/autocore/files/x86/autocore
+#sed -i 's/${g}.*/${a}${b}${c}${d}${e}${f}${hydrid}/g' package/lean/autocore/files/x86/autocore
 
 # 修改本地时间格式
 sed -i 's/os.date()/os.date("%a %Y-%m-%d %H:%M:%S")/g' package/lean/autocore/files/*/index.htm
