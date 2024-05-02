@@ -1,6 +1,6 @@
 <div align="center">
 <img width="768" src="https://cdn.jsdelivr.net/gh/haiibo/OpenWrt/images/openwrt.png"/>
-<h1>OpenWrt — 香橙派zero3 自用</h1>
+<h1>OpenWrt — Sunxi - A53 自用</h1>
 
 </div>
 
