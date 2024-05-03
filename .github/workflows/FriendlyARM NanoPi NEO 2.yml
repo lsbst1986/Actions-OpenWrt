@@ -1,4 +1,4 @@
-name: Build OpenWrt neo2
+name: Build OpenWrt FriendlyARM NanoPi NEO 2
 
 on:
   workflow_dispatch:
