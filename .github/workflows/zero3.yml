@@ -1,4 +1,4 @@
-name: zero3 OpenWrt
+name: Build OpenWrt zero3
 
 on:
   workflow_dispatch:
