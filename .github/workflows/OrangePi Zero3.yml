@@ -1,4 +1,4 @@
-name: Build OpenWrt zero3
+name: Build OpenWrt OrangePi Zero3
 
 on:
   workflow_dispatch:
