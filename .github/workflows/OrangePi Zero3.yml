@@ -97,11 +97,6 @@ jobs:
         mixkey: ${{ env.SOURCE_REPO }}-${{ env.REPO_BRANCH }}-${{ env.DEVICE_TARGET }}-${{ env.DEVICE_SUBTARGET }}
         prefix: ${{ env.OPENWRT_PATH }}
 
-    - name: luci-app-adguardhome
-      run: |
-        cd openwrt/package 
-        git clone https://github.com/lsbst1986/luci-app-adguardhome.git
-
     - name: Install Feeds
       run: |
         cd $OPENWRT_PATH
