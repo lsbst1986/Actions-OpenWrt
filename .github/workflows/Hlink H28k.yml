@@ -1,5 +1,4 @@
-name: OrangePi Zero3
-
+name: Hlink H28k
 on:
   workflow_dispatch:
   schedule:
