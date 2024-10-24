@@ -1,4 +1,4 @@
-name: Hlink H28k
+name: Hinlink H28k
 on:
   workflow_dispatch:
   schedule:
