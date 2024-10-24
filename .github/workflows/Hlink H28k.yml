@@ -15,7 +15,7 @@ env:
   CACHE_TOOLCHAIN: true
   UPLOAD_BIN_DIR: false
   FIRMWARE_RELEASE: true
-  FIRMWARE_TAG: zero3
+  FIRMWARE_TAG: h28k
   TZ: Asia/Shanghai
 
 jobs:
