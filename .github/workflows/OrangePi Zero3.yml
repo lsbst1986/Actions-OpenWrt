@@ -8,7 +8,7 @@ on:
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
-  FEEDS_CONF: feeds.conf.different
+  FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: configs/zero3.config
   EXTRA_CONFIG: configs/extra-24.10.config
   DIY_SCRIPT: diy-script/diy-script-sunxi.sh
@@ -97,12 +97,6 @@ jobs:
         ccache: false
         mixkey: ${{ env.SOURCE_REPO }}-${{ env.REPO_BRANCH }}-${{ env.DEVICE_TARGET }}-${{ env.DEVICE_SUBTARGET }}
         prefix: ${{ env.OPENWRT_PATH }}
-
-    - name: luci-theme-argonn
-      run: |
-        cd openwrt/package 		
-        git clone https://github.com/jerrykuku/luci-theme-argon.git
-        git clone https://github.com/jerrykuku/luci-app-argon-config.git   
 
     - name: Load custom feeds
       run: |
