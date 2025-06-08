@@ -1,8 +1,10 @@
 #!/bin/bash
 
 # 修改默认IP
+sed -i 's/192.168.1.1/192.168.88.3/g' package/base-files/files/bin/config_generate
 sed -i 's/192.168.1.1/192.168.88.3/g' package/base-files/luci2/bin/config_generate
 sed -i 's/KERNEL_PATCHVER:=6.6/KERNEL_PATCHVER:=6.12/g' target/linux/sunxi/Makefile
+sed -i 's/LEDE/Diy/g' package/base-files/files/bin/config_generate
 sed -i 's/LEDE/Diy/g' package/base-files/luci2/bin/config_generate
 
 # 更改默认 Shell 为 zsh
