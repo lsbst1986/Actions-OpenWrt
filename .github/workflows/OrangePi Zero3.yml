@@ -102,12 +102,7 @@ jobs:
       run: |
         cd openwrt/package 		
         git clone https://github.com/jerrykuku/luci-theme-argon.git
-
-    - name: luci-theme-argonn-config
-      run: |
-        cd openwrt/package 		
-        rm -rf luci-app-argon-config
-        git clone -b 18.06 https://github.com/jerrykuku/luci-app-argon-config.git luci-app-argon-config      
+        git clone https://github.com/jerrykuku/luci-app-argon-config.git   
 
     - name: Load custom feeds
       run: |
