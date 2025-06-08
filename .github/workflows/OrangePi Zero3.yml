@@ -98,6 +98,17 @@ jobs:
         mixkey: ${{ env.SOURCE_REPO }}-${{ env.REPO_BRANCH }}-${{ env.DEVICE_TARGET }}-${{ env.DEVICE_SUBTARGET }}
         prefix: ${{ env.OPENWRT_PATH }}
 
+    - name: luci-theme-argonn
+      run: |
+        cd openwrt/package 		
+        git clone https://github.com/jerrykuku/luci-theme-argon.git
+
+    - name: luci-theme-argonn-config
+      run: |
+        cd openwrt/package 		
+        rm -rf luci-app-argon-config
+        git clone -b 18.06 https://github.com/jerrykuku/luci-app-argon-config.git luci-app-argon-config      
+
     - name: Load custom feeds
       run: |
         [ -e $FEEDS_CONF ] && mv $FEEDS_CONF openwrt/feeds.conf.default
