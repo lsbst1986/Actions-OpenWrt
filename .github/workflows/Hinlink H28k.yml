@@ -1,4 +1,5 @@
 name: Hinlink H28k
+
 on:
   workflow_dispatch:
   schedule:
@@ -7,10 +8,10 @@ on:
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
-  FEEDS_CONF: feeds.conf.default
+  FEEDS_CONF: feeds.conf.different
   CONFIG_FILE: configs/h28k.config
-  EXTRA_CONFIG: configs/extra.config
-  DIY_SCRIPT: diy-script.sh
+  EXTRA_CONFIG: configs/extra-24.10.config
+  DIY_SCRIPT: diy-script/diy-script-rockchip.sh
   CLASH_KERNEL: arm64
   CACHE_TOOLCHAIN: true
   UPLOAD_BIN_DIR: false
