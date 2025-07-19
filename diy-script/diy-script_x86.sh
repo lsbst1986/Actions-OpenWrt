@@ -1,9 +1,11 @@
 #!/bin/bash
 
 # 修改默认IP
-sed -i 's/192.168.1.1/192.168.1.253/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.88.3/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.88.3/g' package/base-files/luci2/bin/config_generate
 sed -i 's/KERNEL_PATCHVER:=6.6/KERNEL_PATCHVER:=6.12/g' target/linux/x86/Makefile
-sed -i 's/LEDE/CncTion/g' package/base-files/files/bin/config_generate
+sed -i 's/LEDE/Diy/g' package/base-files/files/bin/config_generate
+sed -i 's/LEDE/Diy/g' package/base-files/luci2/bin/config_generate
 
 # 更改默认 Shell 为 zsh
 # sed -i 's/\/bin\/ash/\/usr\/bin\/zsh/g' package/base-files/files/etc/passwd
@@ -12,7 +14,7 @@ sed -i 's/LEDE/CncTion/g' package/base-files/files/bin/config_generate
 # sed -i 's|/bin/login|/bin/login -f root|g' feeds/packages/utils/ttyd/files/ttyd.config
 
 # 移除要替换的包
-rm -rf feeds/luci/themes/luci-theme-argon
+#rm -rf feeds/luci/themes/luci-theme-argon
 
 # Git稀疏克隆，只克隆指定目录到本地
 function git_sparse_clone() {
@@ -38,8 +40,10 @@ git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall package/luci-a
 
 # Themes
 #git clone --depth=1 -b 18.06 https://github.com/kiddin9/luci-theme-edge package/luci-theme-edge
-git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
-git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
+#git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
+git clone --depth=1 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
+#git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
+git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
 #git clone --depth=1 https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom package/luci-theme-infinityfreedom
 #git_sparse_clone main https://github.com/haiibo/packages luci-theme-atmaterial luci-theme-opentomcat luci-theme-netgear
 
