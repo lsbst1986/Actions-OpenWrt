@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # 修改默认IP
-sed -i 's/192.168.1.1/192.168.88.3/g' package/base-files/files/bin/config_generate
-sed -i 's/192.168.1.1/192.168.88.3/g' package/base-files/luci2/bin/config_generate
+sed -i 's/192.168.1.1/192.168.1.253/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.1.253/g' package/base-files/luci2/bin/config_generate
 sed -i 's/KERNEL_PATCHVER:=6.6/KERNEL_PATCHVER:=6.12/g' target/linux/sunxi/Makefile
-sed -i 's/LEDE/Diy/g' package/base-files/files/bin/config_generate
-sed -i 's/LEDE/Diy/g' package/base-files/luci2/bin/config_generate
+sed -i 's/LEDE/Sunxi/g' package/base-files/files/bin/config_generate
+sed -i 's/LEDE/Sunxi/g' package/base-files/luci2/bin/config_generate
 
 # 更改默认 Shell 为 zsh
 # sed -i 's/\/bin\/ash/\/usr\/bin\/zsh/g' package/base-files/files/etc/passwd
@@ -36,7 +36,7 @@ rm -rf package/helloworld
 git clone --depth=1 -b main https://github.com/sbwml/openwrt_helloworld package/luci-app-ssr-plus
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall package/luci-app-passwall
-#git_sparse_clone master https://github.com/vernesong/OpenClash luci-app-openclash
+git_sparse_clone master https://github.com/vernesong/OpenClash luci-app-openclash
 
 # Themes
 #git clone --depth=1 -b 18.06 https://github.com/kiddin9/luci-theme-edge package/luci-theme-edge
