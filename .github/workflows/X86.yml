@@ -10,7 +10,7 @@ env:
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: configs/x86.config
-  EXTRA_CONFIG: configs/extra-24.10.config
+  EXTRA_CONFIG: configs/extra-23.05.config
   DIY_SCRIPT: diy-script/diy-script_x86.sh
   CLASH_KERNEL: arm64
   CACHE_TOOLCHAIN: true
