@@ -3,7 +3,7 @@ name: X86
 on:
   workflow_dispatch:
   schedule:
-    - cron: 0 4 * * *
+    - cron: 0 2 * * *
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
@@ -97,6 +97,11 @@ jobs:
         ccache: false
         mixkey: ${{ env.SOURCE_REPO }}-${{ env.REPO_BRANCH }}-${{ env.DEVICE_TARGET }}-${{ env.DEVICE_SUBTARGET }}
         prefix: ${{ env.OPENWRT_PATH }}
+
+    - name: luci-app-adguardhome
+      run: |
+        cd openwrt/package 
+        git clone https://github.com/kongfl888/luci-app-adguardhome.git
 
     - name: Load custom feeds
       run: |
